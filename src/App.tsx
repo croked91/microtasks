@@ -1,58 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useState } from 'react';
+import Body from './components/Body';
+import { Button } from './components/buttons';
+import Filter from './components/Filter';
+import Footer from './components/Footer';
+import { NewComponent, NewComponent1 } from './components/NewComponent';
+import FnUS from './components/UseState';
+
+
+
 
 function App() {
+
+  let [topCars] = useState([
+    { manufacturer: 'BMW', model: 'm5cs' },
+    { manufacturer: 'Mercedes', model: 'e63s' },
+    { manufacturer: 'Audi', model: 'rs6' },
+    { manufacturer: 'Audi', model: 'rs6' },
+    { manufacturer: 'Audi', model: 'rs6' }
+  ])
+
+  const Button1Foo = (subscriber:string, age:number) => {
+    console.log(subscriber, age)
+  }
+ 
+  const Button2Foo = (subscriber:string, age:number) => {
+    console.log(subscriber, age)
+  }
+
+  const Button3Foo = () => {
+    console.log("I'm stupid button")
+  }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div className={'App'}>
+      <Body titleForBody="Body" />
+      <Footer titleForFooter='Footer' />
+      <NewComponent cars={topCars} />
+      <NewComponent1 cars={topCars} />
+      <Button title={'1'} callBack={()=>Button1Foo("Vas", 23)} />
+      <Button title={'2'} callBack={()=>Button2Foo("Pet", 47)} />
+      <Button title={'3'} callBack={Button3Foo} />
+      <FnUS />
+      <Filter/>
     </div>
-  );
+  )
 }
 
 export default App;
