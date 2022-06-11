@@ -1,5 +1,6 @@
 import React from "react";
 import {AccordeonTitleType} from '../App'
+import { Immutable } from "./Immutable";
 
 
 
@@ -23,6 +24,7 @@ export const Accordeon = (props: AccordeonType) => {
         <div>
             <div onClick={()=>onClickHandler(!props.collapsed)}>Title</div>
             {props.collapsed === true ? accordeonBody : ''}
+            <Immutable />
         </div>
     )
 }
