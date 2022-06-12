@@ -27,7 +27,7 @@ export const UnHideAccordeon = () => <Accordeon
         {title: 'Title2'},
         {title: 'Title3'},
         {title: 'Title4'},]} 
-    collapsed={true} 
+    collapsed={true}
 />
 
 
@@ -42,5 +42,5 @@ export const WorkAccordeon = () => {
         {title: 'Title2'},
         {title: 'Title3'},
         {title: 'Title4'},]} 
-    collapsed={collapsed} 
+    collapsed={collapsed}
 />)}

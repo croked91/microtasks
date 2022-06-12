@@ -9,10 +9,10 @@ export type AccordeonTitleType = {
 
 
 let accordeonState = [
-    {title: 'Title1'},
-    {title: 'Title2'},
-    {title: 'Title3'},
-    {title: 'Title4'},
+    {title: 'Egor'},
+    {title: 'Kolya'},
+    {title: 'Dima'},
+    {title: 'Miron'},
 ]
 
 function App() {
