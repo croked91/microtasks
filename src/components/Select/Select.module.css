@@ -1,0 +1,126 @@
+.rootRoot{
+    margin: 30px;
+    display: grid;
+    height:fit-content;
+    width:fit-content;
+    position: relative;
+}
+
+.root {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    color: rgba(0, 0, 0, 0.54);
+    min-width: 120px;
+}
+
+.root:hover {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.876);
+}
+
+
+
+
+.svg{
+    width: 1em;
+    height: 1em;
+    font-size: 1.5rem;
+    fill: rgba(0, 0, 0, 0.54);
+    margin-left:auto
+
+}
+
+.labelSelect {
+    padding-right: 24px;
+    min-width: 16px;
+    height: auto;
+    min-height: em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    user-select: none;
+    border-radius: 0;
+    cursor: pointer;
+    font: inherit;
+    letter-spacing: inherit;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 1px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 1em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+
+}
+
+.list {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.rootList {
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.87);
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 5px 5px -3px, rgb(0 0 0 / 14%) 0px 8px 10px 1px, rgb(0 0 0 / 12%) 0px 3px 14px 2px;
+    opacity: 1;
+    transform: none;
+    min-width: 120px;
+    transition: opacity 267ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 178ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    transform-origin: 60px 0px;
+    position: absolute;
+    top: 100%;
+}
+
+.rootlistOff {
+    display: none;
+    
+}
+
+.none {
+    font-style:italic;
+}
+
+.lishka {
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px;
+    border-radius: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    color: inherit;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    text-decoration: none;
+    padding: 6px 16px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-align:center;
+
+}
+
+
+.lishka:hover {
+    background-color: rgb(240, 239, 239);
+}
+
+
+
+
+

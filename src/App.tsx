@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Accordeon } from './components/Accordeon';
+import { SelectCustom } from './components/Select/SelectCustom';
+import { Select } from './stories/Select';
 
 
 export type AccordeonTitleType = {
@@ -21,6 +23,7 @@ function App() {
 
   return (
     <div className={'App'}> 
+      <SelectCustom />
       <Accordeon callback={setCollapsed} accordeonState={accordeonState} collapsed={collapsed}/>
     </div>
   )
