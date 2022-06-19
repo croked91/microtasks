@@ -7,7 +7,7 @@
 }
 
 .root {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.54);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.876);
     cursor: pointer;
     display: grid;
     grid-template-columns: 3fr 1fr;
@@ -15,8 +15,27 @@
     min-width: 120px;
 }
 
+
+
+
+
 .root:hover {
     border-bottom: 2px solid rgba(0, 0, 0, 0.876);
+
+}
+
+
+.rootNone {
+    background-color: rgb(238, 238, 238);    
+}
+
+.borderBottomOn{
+    border-bottom-color: 2px solid #1976d2;
+}
+
+.borderBottomOn:hover{
+    border-bottom: 2px solid #1976d2;
+    
 }
 
 
@@ -27,15 +46,22 @@
     height: 1em;
     font-size: 1.5rem;
     fill: rgba(0, 0, 0, 0.54);
-    margin-left:auto
+    margin-left:auto;
+}
 
+.svgOpen{
+    width: 1em;
+    height: 1em;
+    font-size: 1.5rem;
+    fill: rgba(0, 0, 0, 0.54);
+    margin-left:auto;
+    transform: rotate(180deg);
 }
 
 .labelSelect {
     padding-right: 24px;
     min-width: 16px;
     height: auto;
-    min-height: em;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -53,12 +79,51 @@
     margin: 0;
     font-weight: 400;
     font-size: 1rem;
+    transform: translate(0px, 0px) scale(1);
+    transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 
 }
+
+.labelTop{
+    transform: translate(-10px, -17px) scale(0.75);
+    transition: color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    color: #1976d2;
+
+}
+
+
+
+.labelListHidden{
+    display: none;
+}
+
+.labelListShow{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: visible;
+    user-select: none;
+    border-radius: 0;
+    cursor: pointer;
+    font: inherit;
+    letter-spacing: inherit;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 1px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 1em;
+    margin: 0;
+    font-weight: 400;
+    font-size: 1rem;
+    position: absolute;
+
+}
+
 
 .list {
     list-style-type: none;
     padding-inline-start: 0;
+    
 }
 
 .rootList {
@@ -74,6 +139,7 @@
     transform-origin: 60px 0px;
     position: absolute;
     top: 100%;
+
 }
 
 .rootlistOff {
@@ -120,7 +186,12 @@
     background-color: rgb(240, 239, 239);
 }
 
+.activeLishka {
+    background-color: rgb(242, 242, 255);
+}
 
-
+.activeLishka:hover {
+    background-color: rgb(234, 241, 255);
+}
 
 
