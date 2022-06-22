@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useState,KeyboardEvent } from "react";
 import s from "./Select.module.css"
 
 let localState = [
-    { name: "Ten" }, { name: "Twenty" }, { name: "Thirty" }
+    { name: "Ten", id: 1 }, { name: "Twenty", id: 2 }, { name: "Thirty", id: 3 }
 ]
 
+type SelectCustomType = {
+    callback: (value: any)=>void
+}
 
 
-export const SelectCustom = () => {
+
+export const SelectCustom = (type: SelectCustomType) => {
 
     const [age, setAge] = useState("")
     const [x, setX] = useState(false)
@@ -27,8 +31,9 @@ export const SelectCustom = () => {
     }
 
 
-    let i = localState.map(el =>
-        <li onClick={() => setTitleHandler(el.name)}
+
+    let i = localState.map((el, index) =>
+        <li tabIndex={0} key={index} onClick={() => setTitleHandler(el.name)}
             className={el.name === age ? s.activeLishka + " " + s.lishka : s.lishka}>
             {el.name}
         </li>)
@@ -42,7 +47,9 @@ export const SelectCustom = () => {
         setZ(false)
         setX(false)
     }
-   
+
+
+
     return (
         <div tabIndex={0} onBlur={onBlurHandler} className={s.rootRoot}>
             <div onClick={onOffListHandler} className={z ? s.root + " " + s.rootNone + " " + s.borderBottomOn : s.root}>
@@ -50,8 +57,8 @@ export const SelectCustom = () => {
                 <label className={z ? s.labelListShow : s.labelListHidden}>{age}</label>
                 <svg className={x ? s.svgOpen : s.svg}><path className={s.path} d="M7 10l5 5 5-5z"></path></svg>
             </div>
-            <div className={x ? s.rootList : s.rootlistOff}>
-                <ul className={s.list}>
+            <div tabIndex={1} className={x ? s.rootList : s.rootlistOff}>
+                <ul tabIndex={2}  className={s.list}>
                     <li onClick={() => setTitleHandler("None")} className={s.lishka + " " + s.none}>None</li>
                     {i}
                 </ul>

@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className={'App'}> 
-      <SelectCustom />
+      <SelectCustom callback={()=>{}}/>
       <Accordeon callback={setCollapsed} accordeonState={accordeonState} collapsed={collapsed}/>
     </div>
   )
