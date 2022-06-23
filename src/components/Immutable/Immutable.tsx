@@ -17,7 +17,7 @@ export type UserWithLaptopType = UserType & { laptop: LaptopType }
 
 
 
-export const Immutable = () => {
+export const ImmutableBase = () => {
 
 
 
@@ -57,3 +57,5 @@ export const Immutable = () => {
     return (<div>
     </div>)
 }
+
+export const Immutable = React.memo(ImmutableBase)

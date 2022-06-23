@@ -11,7 +11,7 @@ type SelectCustomType = {
 
 
 
-export const SelectCustom = (type: SelectCustomType) => {
+export const SelectCustomBase = (type: SelectCustomType) => {
 
     const [age, setAge] = useState("")
     const [x, setX] = useState(false)
@@ -67,3 +67,4 @@ export const SelectCustom = (type: SelectCustomType) => {
     )
 }
 
+export const SelectCustom = React.memo(SelectCustomBase)

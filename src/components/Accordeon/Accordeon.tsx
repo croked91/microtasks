@@ -3,6 +3,7 @@ import {AccordeonTitleType, ActionType} from '../../App'
 import { Immutable } from "../Immutable/Immutable";
 
 
+
 const TOOGLE_CONST = "SET-TOGGLE-COLLAPSED"
 
 type AccordeonType = {
@@ -25,7 +26,7 @@ export function reducer (state: StateType, action: ActionType) {
     }
   }
 
-export const Accordeon = (props: AccordeonType) => {
+export const AccordeonBase = (props: AccordeonType) => {
     
 
 
@@ -48,3 +49,5 @@ export const Accordeon = (props: AccordeonType) => {
         </div>
     )
 }
+
+export const Accordeon = React.memo(AccordeonBase)

@@ -18,7 +18,7 @@ let items = [
     {title: 'misha', value: 3}
 ]
 
-export function Select (props: SelectPropsType){
+export function SelectBase (props: SelectPropsType){
     return (
         <div>
             <div>{}</div>
@@ -26,3 +26,5 @@ export function Select (props: SelectPropsType){
         </div>
     )
 }
+
+export const Select = React.memo(SelectBase)
